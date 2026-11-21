@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#111b47">
+  <title>Tiranga Games — Practice Arcade</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn menu-btn" aria-label="Menu">‹</button>
+    <a class="brand" href="#" aria-label="Tiranga home">
+      <span class="brand-mark">7</span>
+      <span>Tiranga</span>
+    </a>
+    <div class="top-actions">
+      <div class="balance"><span class="coin">●</span><strong>0.00</strong></div>
+      <button class="icon-btn" aria-label="Add practice credits">＋</button>
+      <button class="avatar" aria-label="Profile">T</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">DAILY &amp; WEEKLY CHALLENGES</p>
+        <h1>MISSION<br><span>REWARDS</span></h1>
+        <p>Complete tasks. Earn practice rewards.</p>
+        <button class="primary-btn" id="viewTasks">VIEW TASKS</button>
+      </div>
+      <div class="target-art" aria-hidden="true">
+        <div class="target"><div class="bullseye"></div></div>
+        <div class="dart">➤</div>
+        <div class="coin-badge">₹</div>
+      </div>
+    </section>
+
+    <section class="welcome-card">
+      <div class="speaker">◖))</div>
+      <p>Welcome to the Tiranga Games! Complete challenges and climb the leaderboard.</p>
+      <button id="detailBtn">♨ Detail</button>
+    </section>
+
+    <section class="categories" aria-label="Game categories">
+      <button class="category popular"><span class="category-icon">🏆</span><strong>Popular</strong></button>
+      <button class="category lottery"><span class="category-icon">🎟️</span><strong>Lottery</strong></button>
+      <button class="category casino"><span class="category-icon">♠️</span><strong>Casino</strong></button>
+      <button class="category slots"><span class="category-icon">🎰</span><strong>Slots</strong></button>
+      <button class="category sports"><span class="category-icon">⚽</span><strong>Sports</strong></button>
+      <button class="category rummy"><span class="category-icon">🂡</span><strong>Rummy</strong></button>
+      <button class="category fishing"><span class="category-icon">🐟</span><strong>Fishing</strong></button>
+      <button class="category origin"><span class="category-icon">✈</span><strong>Origin</strong></button>
+    </section>
+
+    <section class="recommendations">
+      <div class="section-heading">
+        <h2><span>♨</span> Platform recommendation</h2>
+        <button id="filterBtn">All</button>
+      </div>
+      <div class="game-grid">
+        <article class="game-card red-card" data-name="AVIATOR"><span class="game-label">AVIATOR</span></article>
+        <article class="game-card chicken-card" data-name="CHICKEN"><span class="game-label">CHICKEN</span></article>
+        <article class="game-card vortex-card" data-name="VORTEX"><span class="game-label">VORTEX</span></article>
+      </div>
+    </section>
+
+    <section class="game-panel" id="gamePanel">
+      <div class="game-top">
+        <button class="back-btn">‹</button>
+        <div class="game-title"><strong>Sky</strong> <em>Aviator</em></div>
+        <div class="game-balance"><span>●</span> 0 <small>INR</small></div>
+        <button class="round-menu">☰</button>
+      </div>
+
+      <div class="history" aria-label="Recent multipliers">
+        <span>1.48x</span><span>5.15x</span><span>1.53x</span><span>2.41x</span><span>4.42x</span><span>7.73x</span><b>⌛</b>
+      </div>
+
+      <div class="flight-stage" id="flightStage">
+        <canvas id="flightCanvas" width="700" height="460"></canvas>
+        <div class="multiplier" id="multiplier">1.00x</div>
+      </div>
+
+      <div class="bet-box">
+        <div class="bet-tabs"><button class="active" data-mode="Bet">Bet</button><button data-mode="Auto">Auto</button></div>
+        <div class="bet-controls">
+          <button class="stepper" id="minusBtn">−</button>
+          <strong id="betAmount">10.00</strong>
+          <button class="stepper" id="plusBtn">＋</button>
+          <button class="bet-button" id="betButton">START<br><span>10.00</span></button>
+        </div>
+        <div class="quick-values">
+          <button data-value="10">10</button><button data-value="100">100</button>
+          <button data-value="500">500</button><button data-value="1000">1,000</button>
+        </div>
+      </div>
+
+      <div class="bets-table">
+        <div class="table-tabs"><button class="active">All bets</button><button>My bets</button><button>Top</button></div>
+        <h3>ALL BETS <span id="betCount">1817</span></h3>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <button class="active"><span>⌂</span><strong>Home</strong></button>
+    <button><span>▣</span><strong>Activity</strong></button>
+    <button><span>$</span><strong>Promotion</strong></button>
+    <button><span>◉</span><strong>Account</strong></button>
+  </nav>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
